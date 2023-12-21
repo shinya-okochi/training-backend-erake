@@ -16,19 +16,19 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/erake-traning/express-app"]
     # Deploy container image to Cloud Run
-#   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
-#     entrypoint: gcloud
-#     args:
-#       [
-#         "run",
-#         "deploy",
-#         "training-erake",
-#         "--image",
-#         "gcr.io/erake-traning/express-app",
-#         "--region",
-#         "us-central1",
-#         "--project",
-#         "erake-traning",
-#       ]
-# images:
-#   - gcr.io/erake-traning/express-app
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      [
+        "run",
+        "deploy",
+        "training-erake",
+        "--image",
+        "gcr.io/erake-traning/express-app",
+        "--region",
+        "us-central1",
+        "--project",
+        "erake-traning",
+      ]
+images:
+  - gcr.io/erake-traning/express-app
